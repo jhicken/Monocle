@@ -49,7 +49,7 @@ Monocle.Dimensions.Columns = function (pageDiv) {
     }
 
     var rules = [
-      'html#RS\\:monocle * {',
+      'html#RS-monocle * {',
         'max-width: '+pdims.col+'px !important;',
       '}',
       'img, video, audio, object, svg {',
