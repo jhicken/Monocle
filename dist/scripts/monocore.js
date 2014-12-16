@@ -1770,7 +1770,7 @@ Monocle.Formatting = function (reader, optStyles, optScale) {
   function clampStylesheets(implStyles) {
     var defCSS = k.DEFAULT_STYLE_RULES;
     if (Monocle.Browser.env.floatsIgnoreColumns) {
-      defCSS.push("html#RS\\:monocle * { float: none !important; }");
+      defCSS.push("html#RS-monocle * { float: none !important; }");
     }
     p.defaultStyles = addPageStyles(defCSS);
     if (implStyles) {
@@ -2033,12 +2033,12 @@ Monocle.Formatting = function (reader, optStyles, optScale) {
 
 
 Monocle.Formatting.DEFAULT_STYLE_RULES = [
-  "html#RS\\:monocle * {" +
+  "html#RS-monocle * {" +
     "-webkit-font-smoothing: subpixel-antialiased;" +
     "text-rendering: auto !important;" +
     "word-wrap: break-word !important;" +
   "}",
-  "html#RS\\:monocle body {" +
+  "html#RS-monocle body {" +
     "-webkit-text-size-adjust: none;" +
     "-ms-touch-action: none;" +
     "touch-action: none;" +
@@ -3311,7 +3311,9 @@ Monocle.Place = function () {
     options = options || {};
     var locus = {
       page: pageNumber(),
-      componentId: componentId()
+      lastPage: pageAtPercentageThrough(1),
+      componentId: componentId(),
+      bookPercentage: percentageOfBook()
     }
     if (options.direction) {
       locus.page += options.direction;
@@ -4924,7 +4926,7 @@ Monocle.Dimensions.Columns = function (pageDiv) {
     }
 
     var rules = [
-      'html#RS\\:monocle * {',
+      'html#RS-monocle * {',
         'max-width: '+pdims.col+'px !important;',
       '}',
       'img, video, audio, object, svg {',

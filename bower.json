@@ -1,0 +1,16 @@
+{
+  "name": "Monocle",
+  "version": "3.2.0",
+  "homepage": "https://github.com/jhicken/Monocle",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}

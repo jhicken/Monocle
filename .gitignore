@@ -1,2 +1,4 @@
 .rvmrc
 .screenrc
+node_modules
+bower_components

@@ -1,0 +1,26 @@
+{
+  "name": "Monocle",
+  "version": "3.2.0",
+  "description": "A silky, tactile browser-based ebook reader.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jhicken/Monocle.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhicken/Monocle/issues"
+  },
+  "homepage": "https://github.com/jhicken/Monocle",
+  "scripts": {
+      "postinstall": "bower install && npm run-script build",
+      "build": "rake"
+  }
+}
