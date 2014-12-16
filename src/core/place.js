@@ -100,7 +100,9 @@ Monocle.Place = function () {
     options = options || {};
     var locus = {
       page: pageNumber(),
-      componentId: componentId()
+      lastPage: pageAtPercentageThrough(1),
+      componentId: componentId(),
+      bookPercentage: percentageOfBook()
     }
     if (options.direction) {
       locus.page += options.direction;

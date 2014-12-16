@@ -31,7 +31,7 @@
 //    initialized. (See comments at Book#pageNumberAt for more about
 //    the locus option).
 //
-//  systemId: the id for root elements of components, defaults to "RS:monocle"
+//  systemId: the id for root elements of components, defaults to "RS-monocle"
 //
 Monocle.Reader = function (node, bookData, options, onLoadCallback) {
 
@@ -678,7 +678,7 @@ Monocle.Reader = function (node, bookData, options, onLoadCallback) {
 
 
 Monocle.Reader.RESIZE_DELAY = Monocle.Browser.renders.slow ? 500 : 100;
-Monocle.Reader.DEFAULT_SYSTEM_ID = 'RS:monocle'
+Monocle.Reader.DEFAULT_SYSTEM_ID = 'RS-monocle'
 Monocle.Reader.DEFAULT_CLASS_PREFIX = 'monelem_'
 Monocle.Reader.COMPATIBILITY_INFO =
   "<h1>Incompatible browser</h1>"+
